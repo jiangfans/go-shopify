@@ -93,11 +93,14 @@ type Order struct {
 	ShippingAddress       *Address         `json:"shipping_address,omitempty"`
 	Currency              string           `json:"currency,omitempty"`
 	TotalPrice            *decimal.Decimal `json:"total_price,omitempty"`
+	TotalPriceSet         *AmountSet       `json:"total_price_set"`
+	TotalShippingPriceSet *AmountSet       `json:"total_shipping_price_set"`
 	SubtotalPrice         *decimal.Decimal `json:"subtotal_price,omitempty"`
 	TotalDiscounts        *decimal.Decimal `json:"total_discounts,omitempty"`
 	TotalLineItemsPrice   *decimal.Decimal `json:"total_line_items_price,omitempty"`
 	TaxesIncluded         bool             `json:"taxes_included,omitempty"`
 	TotalTax              *decimal.Decimal `json:"total_tax,omitempty"`
+	TotalTipReceived      string           `json:"total_tip_received"`
 	TaxLines              []TaxLine        `json:"tax_lines,omitempty"`
 	TotalWeight           int              `json:"total_weight,omitempty"`
 	FinancialStatus       string           `json:"financial_status,omitempty"`
